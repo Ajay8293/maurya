@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="contact_form.css">
+    <link rel="stylesheet" href="home.css">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color:gray;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+</style>
+
+<div class="header">
+  <a href="#default" class="logo">Trading</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact" onclick=a()>Contact Us</a>
+    <a href="#about" onclick="document.getElementById('id01').style.display='block'" >Login</a>
+  </div>
+
+  <script>
+    function a()
+    {
+    alert("!oh No Local Sever faild But Contact form has been open please Scroll down and see below");
+}
+  </script>
+</div>
+<!-- home %%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<div class="home">
+<!--     
+<h1>Own your future with Upstox</h1> -->
+<div><h1>Own your future with Us</h1><br><br>
+    <h4> Learn-> Decide -> Invest<br><br>
+        Learn all about investments from experts. Make informed decisions using smart tools.
+         Invest easily with just a click.</h3>
+</div>
+
+<div class="img_sec"> <img src="homepage-hero-1cr.png" alt=""> </div>
+    
+
+
+</div>
+<br>
+<div style="padding: 20px;"></div>
+<br>
+      <!-- end of home sec -->
+    <!-- //<button " style="width:auto;">Login</button> -->
+    
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+   
+   
+<!-- *************************************************************************************** -->
+
+
+
+
+<div class="contact_form" id="contact_form">
+    <h3>Contact Form</h3>
+  <form >
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country"> Select your Country</label>
+    <select id="country" name="country">
+      <option value="India">India</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+    <input type="submit" onclick="document.getElementById('contact_form').style.display='none'" value="Cancel">
+  </form>
+</div>
+
+</body>
+</html>
